@@ -1,0 +1,77 @@
+.body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header header"
+    "aside content content content"
+    "aside content content content";
+}
+
+.header {
+  grid-area: header;
+
+  width: 1200px;
+  max-width: 1440px;
+  border: 1px solid red;
+}
+
+header {
+  .wrap-header {
+    display: flex;
+  }
+}
+
+.wrap-header .nav-bar {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap-header .nav-bar ul {
+  display: flex;
+  justify-content: right;
+
+  margin-right: 36px;
+}
+
+.wrap-header .nav-bar ul li {
+}
+
+.wrap-header .nav-bar ul li a {
+  padding: 10px 6px;
+  text-decoration: none;
+
+  font-family: "Roboto Condensed";
+  font-size: 20px;
+  color: black;
+}
+
+/* aside */
+.aside {
+  grid-area: aside;
+
+  border: 1px solid green;
+}
+
+.menu {
+  margin: 10px 20px;
+}
+
+.menu .good-at-list {
+  margin-top: 20px;
+}
+
+/* end aside */
+
+.content {
+  grid-area: content;
+}
